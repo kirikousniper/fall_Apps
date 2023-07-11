@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly 
 from pympler.util.bottle import app
 import numpy as np
 import time
