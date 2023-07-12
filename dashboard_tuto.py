@@ -5,7 +5,6 @@ import numpy as np
 import time
 import plotly.express as px
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 #from plotly.subplots import make_subplots as ms
 st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide')
 t1, t2 = st.columns((0.07, 1))
@@ -76,14 +75,14 @@ placeholder = st.empty()
 
 # dataframe filter
 
-df = basefinale[basefinale['campaign_id']==campaign_filter]
+df = basefinale[basefinale['campaign_id'] == campaign_filter]
 
-# near real-time / live feed simulation
+
 
 for seconds in range(20):
 
 
-# creating KPIs
+#creating KPIs
     avg_age = np.mean(df['age'])
     avg_age_global = np.mean(basefinale['age'])
     avg_ages = df.groupby('product_id')['age'].mean().reset_index()
@@ -176,7 +175,6 @@ with st.expander("Contact us"):
 
 if __name__ == '__dashboard_tuto__':
     app.run(debug=True)
-
 
 
 
