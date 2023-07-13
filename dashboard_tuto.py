@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 from pympler.util.bottle import app
 import numpy as np
+import plotly.express as px
 import time
 import plotly.graph_objects as go
-import plotly.express as px
 #from plotly.subplots import make_subplots as ms
 st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide')
 t1, t2 = st.columns((0.07, 1))
