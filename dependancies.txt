@@ -2,6 +2,7 @@ streamlit
 pandas
 pympler.util.bottle
 numpy
+import plotly
 plotly.express
 time
 plotly.graph_objects
