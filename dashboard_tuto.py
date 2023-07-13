@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from pympler.util.bottle import app
 import numpy as np
+import plotly
 import plotly.express as px
 import time
 import plotly.graph_objects as go
