@@ -1,7 +1,5 @@
 streamlit
 pandas
 numpy
-time
 plotly
 plotly.express
-plotly.graph_objects
