@@ -5,7 +5,6 @@ import time
 import plotly
 import plotly.express as px
 import plotly.graph_objects as go
-import requests
 #from plotly.subplots import make_subplots as ms
 st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide')
 t1, t2 = st.columns((0.07, 1))
