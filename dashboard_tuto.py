@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from pympler.util.bottle import app
 import numpy as np
 import plotly
 import plotly.express as px
@@ -173,9 +172,3 @@ with st.expander("Contact us"):
         st.text_area("Query", "Please fill in all the information or we may not be able to process your request")
 
         submit_button = st.form_submit_button(label='Send Information')
-
-if __name__ == '__dashboard_tuto__':
-    app.run(debug=True)
-
-
-
