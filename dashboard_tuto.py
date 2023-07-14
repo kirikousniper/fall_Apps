@@ -172,8 +172,3 @@ with st.expander("Contact us"):
         st.text_area("Query", "Please fill in all the information or we may not be able to process your request")
 
         submit_button = st.form_submit_button(label='Send Information')
-
-
-
-
-
