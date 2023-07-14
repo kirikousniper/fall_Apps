@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 import plotly
 import plotly.express as px
 import plotly.graph_objects as go
+import requests
 #from plotly.subplots import make_subplots as ms
 st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide')
 t1, t2 = st.columns((0.07, 1))
@@ -53,7 +55,6 @@ def load_data():
     merged_data = pd.merge(merged_data1, achats, on='cookie_id', how='left')
     merged_data = pd.DataFrame(merged_data)
     return merged_data
-
 base=load_data()
 basefinale = pd.DataFrame(base)
 
@@ -61,7 +62,9 @@ toggle = st.checkbox("To view data", value=True, help="Untick if you wanna see d
 click = st.button("Data", disabled=bool(toggle))
 if click:
     st.write(basefinale)
-    
+
+with st.spinner('Wait for it...'):
+    time.sleep(10)
 
 
 campaign_filter = st.selectbox("Select the campaign id", pd.unique(basefinale['campaign_id']))
@@ -163,9 +166,15 @@ with fig_col1:
 
 st.markdown("### Detailed Data View")
 st.write(base)
+st.write(basefinale)
 with st.expander("Contact us"):
     with st.form(key='contact', clear_on_submit=True):
         email = st.text_input('Contact Email')
         st.text_area("Query", "Please fill in all the information or we may not be able to process your request")
 
         submit_button = st.form_submit_button(label='Send Information')
+
+
+
+
+
