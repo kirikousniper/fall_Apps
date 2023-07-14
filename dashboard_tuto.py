@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import plotly
 import plotly.express as px
-import time
 import plotly.graph_objects as go
 #from plotly.subplots import make_subplots as ms
 st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide')
@@ -62,9 +61,7 @@ toggle = st.checkbox("To view data", value=True, help="Untick if you wanna see d
 click = st.button("Data", disabled=bool(toggle))
 if click:
     st.write(basefinale)
-
-with st.spinner('Wait for it...'):
-    time.sleep(10)
+    
 
 
 campaign_filter = st.selectbox("Select the campaign id", pd.unique(basefinale['campaign_id']))
